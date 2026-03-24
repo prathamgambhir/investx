@@ -126,3 +126,15 @@
     @apply bg-background text-foreground;
     }
 }
+
+@layer components {
+  /* This creates the high-end blur seen in the Vestilo image */
+  .glass-navbar {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
+  }
+
+  /* Custom glow for buttons or cards */
+  .vestilo-glow {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+}
