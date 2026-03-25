@@ -4,7 +4,7 @@ import HeroImage from "@/public/images/hero-dashboard.png"
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full py-6 md:py-8 lg:py-12 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative w-full py-6 md:py-8 lg:py-12 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8">
       {/* Optional faint background grid or dots could go here */}
       
       {/* Tittle */}
@@ -30,7 +30,27 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Image */}
-      
+      <div className="w-full max-w-8xl mx-auto mt-16 md:mt-24 px-4 sm:px-6 relative flex justify-center">
+        {/* Background glow behind the image */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%] max-w-3xl h-75 md:h-100 bg-blue-500/30 dark:bg-white/10 blur-[100px] pointer-events-none rounded-full"></div>
+        
+        <div 
+          className="relative w-full rounded-xl md:rounded-2xl"
+          style={{
+            WebkitMaskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, black 40%, transparent 100%)'
+          }}
+        >
+          <div className="w-full drop-shadow-[0px_0px_20px_rgba(59,130,246,0.4)] dark:drop-shadow-[0_0_20px_rgba(255,255,255,0.09)]">
+            <Image 
+              src={HeroImage}
+              alt="InvestX Dashboard Preview" 
+              priority
+              className="w-full h-auto object-contain dark:invert-100"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
