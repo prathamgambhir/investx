@@ -1,4 +1,6 @@
+import Image from "next/image";
 import InvestgptTextarea from "./investgpt-textarea";
+import HeroImage from "@/public/images/hero-dashboard.png"
 
 export default function HeroSection() {
   return (
@@ -7,7 +9,7 @@ export default function HeroSection() {
       
       {/* Tittle */}
       <div className="z-10 flex flex-col items-center gap-4 md:gap-6">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50/80 border border-blue-200 dark:bg-blue-500/10 dark:border-blue-500/20 backdrop-blur-sm text-sm font-medium text-blue-600 dark:text-blue-400 mb-2">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50/80 border border-blue-200 dark:bg-blue-500/10 dark:border-blue-500/20 backdrop-blur-sm text-xs font-medium text-blue-600 dark:text-blue-400 mb-2">
           <span className="h-1.5 w-1.5 rounded-full bg-blue-500 dark:bg-blue-400 shadow-[0_0_8px_rgba(59,130,246,0.6)] dark:shadow-[0_0_8px_rgba(96,165,250,0.6)]"></span>
           Portfolio
         </div>
@@ -23,6 +25,11 @@ export default function HeroSection() {
       </div>
 
       {/* InvestGPT */}
+      <div className="w-full max-w-2xl mx-auto mt-16 md:mt-16 px-4">
+        <InvestgptTextarea />
+      </div>
+
+      {/* Hero Image */}
       
     </section>
   );
