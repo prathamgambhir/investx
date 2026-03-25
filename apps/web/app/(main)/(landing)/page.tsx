@@ -4,7 +4,7 @@ import { Button } from "@workspace/ui/components/button"
 
 export default function Page() {
   return (
-    <div>
+    <div className="h-screen w-full flex flex-col gap-12 items-center">
       <HeroSection />
     </div>
   )
