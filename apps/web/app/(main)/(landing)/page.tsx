@@ -3,6 +3,7 @@ import { ToggleThemeButton } from "@/components/theme/toggle-theme"
 import LogoTicker from "@/components/landing/logo-ticker"
 import FeatureSection from "@/components/landing/feature"
 import DeepInsights from "@/components/landing/deep-insights"
+import TrackPerformance from "@/components/landing/track-performance"
 
 export default function LandingPage() {
   return (
@@ -11,6 +12,7 @@ export default function LandingPage() {
       <LogoTicker />
       <FeatureSection />
       <DeepInsights />
+      <TrackPerformance />
     </div>
   )
 }
