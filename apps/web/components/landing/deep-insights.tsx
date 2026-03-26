@@ -1,10 +1,10 @@
 import Image from "next/image"
-import DeepInsightsImage from "@/public/images/deep-insights.jpg"
+import DeepInsightsImage from "@/public/images/deep-insights.png"
 import { cn } from "@workspace/ui/lib/utils"
 
 export default function DeepInsights() {
   return (
-    <section className="relative w-full overflow-hidden bg-transparent py-8 md:py-16">
+    <section className="relative w-full overflow-hidden bg-transparent py-8 md:py-16 ">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2 md:gap-16">
           {/* Content Side - Ordered first on small devices (order-1), second on desktop/tablet (md:order-2) */}
@@ -31,7 +31,7 @@ export default function DeepInsights() {
             </p>
 
             {/* CTA Button */}
-            <button className="group relative flex items-center justify-center overflow-hidden rounded-full bg-blue-600 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:bg-blue-500 active:scale-95 dark:bg-blue-500 dark:shadow-blue-500/20 dark:hover:bg-blue-400">
+            <button className="group relative flex items-center justify-center overflow-hidden rounded-full bg-blue-200 px-6 py-3 text-sm font-semibold text-blue-900 shadow-sm transition-all hover:bg-blue-300 active:scale-95 dark:bg-[#a8c7fa] dark:hover:bg-[#8ab4f8] dark:text-slate-900">
               Explore Intelligence
             </button>
           </div>
@@ -53,7 +53,7 @@ export default function DeepInsights() {
                 alt="AI Analytics Dashboard"
                 priority
                 className={cn(
-                  "h-auto w-full object-contain transition-all duration-1000",
+                  "h-auto w-full object-contain transition-all duration-1000 bg-transparent rounded-2xl brightness-110 contrast-105",
                   // Dark mode inversion to turn light UI images into dark-themed assets
                   "dark:brightness-95 dark:contrast-125 dark:hue-rotate-180 dark:invert"
                 )}
