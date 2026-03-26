@@ -4,6 +4,7 @@ import LogoTicker from "@/components/landing/logo-ticker"
 import FeatureSection from "@/components/landing/feature"
 import DeepInsights from "@/components/landing/deep-insights"
 import TrackPerformance from "@/components/landing/track-performance"
+import AIFeature from "@/components/landing/ai-feature"
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <FeatureSection />
       <DeepInsights />
       <TrackPerformance />
+      <AIFeature />
     </div>
   )
 }

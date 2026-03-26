@@ -11,7 +11,7 @@ export default function SubFolderLayout({
     <div className="relative flex min-h-screen flex-col bg-background text-foreground transition-colors duration-300">
       {/* Background Glow Layer (Stays behind everything) */}
       <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(0,163,255,0.1),rgba(255,255,255,0.9))] dark:bg-[radial-gradient(circle_at_50%_25%,rgba(120,119,198,0.3),rgba(0,0,0,0.9))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_25%,rgba(0,163,255,0.1),rgba(255,255,255,1))] dark:bg-[radial-gradient(circle_at_50%_25%,rgba(120,119,198,0.22),rgba(0,0,0,1))]" />
       </div>
 
       <div className="relative z-10 flex flex-col min-h-screen">
