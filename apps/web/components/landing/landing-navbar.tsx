@@ -9,7 +9,7 @@ import { navLinks } from "@/config/navbar";
 
 export default function LandingNavbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6  border-b-[0.5px] border-slate-400 dark:border-slate-700">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6  border-b-[0.5px] border-slate-400 dark:border-slate-700 backdrop-blur-lg">
       <nav className="flex w-full max-w-7xl items-center justify-between">
         
         {/* Logo - Adapts color based on theme */}

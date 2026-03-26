@@ -9,6 +9,7 @@ export default function HeroSection() {
       
       {/* Tittle */}
       <div className="z-10 flex flex-col items-center gap-4 md:gap-6">
+        
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50/80 border border-blue-200 dark:bg-blue-500/10 dark:border-blue-500/20 backdrop-blur-sm text-xs font-medium text-blue-600 dark:text-blue-400 mb-2">
           <span className="h-1.5 w-1.5 rounded-full bg-blue-500 dark:bg-blue-400 shadow-[0_0_8px_rgba(59,130,246,0.6)] dark:shadow-[0_0_8px_rgba(96,165,250,0.6)]"></span>
           Portfolio
@@ -30,9 +31,9 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Image */}
-      <div className="w-full max-w-8xl mx-auto mt-16 md:mt-24 px-4 sm:px-6 relative flex justify-center">
+      <div className="w-full mx-auto mt-16 md:mt-24 relative flex justify-center">
         {/* Background glow behind the image */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%] max-w-3xl h-75 md:h-100 bg-blue-500/30 dark:bg-white/10 blur-[100px] pointer-events-none rounded-full"></div>
+        {/* <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[80%] max-w-3xl h-75 md:h-100 bg-blue-500/30 dark:bg-white/10 blur-[100px] pointer-events-none rounded-full"></div> */}
         
         <div 
           className="relative w-full rounded-xl md:rounded-2xl"
