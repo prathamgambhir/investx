@@ -25,13 +25,13 @@ const LOGOS = [...COMPANIES, ...COMPANIES, ...COMPANIES, ...COMPANIES]
 
 export default function LogoTicker() {
   return (
-    <div className="flex w-full flex-col items-center justify-center gap-24 overflow-hidden bg-transparent py-8 md:py-16">
+    <div className="flex w-full flex-col items-center justify-center gap-24 overflow-hidden bg-transparent py-16 md:py-24">
       <div className="space-y-2 text-center">
         <h2 className="text-[10px] font-bold tracking-[0.2em] text-slate-600 uppercase opacity-80 md:text-xs dark:text-slate-400">
           Global Market Coverage
         </h2>
-        <p className="text-lg font-medium text-slate-800 md:text-xl dark:text-slate-200">
-          Analyze assets across major indices and tech giants
+        <p className="text-lg max-w-xl mx-auto font-medium text-slate-800 md:text-xl dark:text-slate-200">
+          Analyze assets across major indices <br className="block sm:hidden"/>and tech giants
         </p>
       </div>
       <div
