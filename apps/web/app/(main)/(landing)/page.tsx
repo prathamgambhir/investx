@@ -5,6 +5,7 @@ import FeatureSection from "@/components/landing/feature"
 import DeepInsights from "@/components/landing/deep-insights"
 import TrackPerformance from "@/components/landing/track-performance"
 import AIFeature from "@/components/landing/ai-feature"
+import FAQSection from "@/components/landing/faq"
 
 export default function LandingPage() {
   return (
@@ -15,6 +16,7 @@ export default function LandingPage() {
       <DeepInsights />
       <TrackPerformance />
       <AIFeature />
+      <FAQSection />
     </div>
   )
 }
