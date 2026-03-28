@@ -6,6 +6,7 @@ import DeepInsights from "@/components/landing/deep-insights"
 import TrackPerformance from "@/components/landing/track-performance"
 import AIFeature from "@/components/landing/ai-feature"
 import FAQSection from "@/components/landing/faq"
+import CTASection from "@/components/landing/cta"
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <TrackPerformance />
       <AIFeature />
       <FAQSection />
+      <CTASection />
     </div>
   )
 }
