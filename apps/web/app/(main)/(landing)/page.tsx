@@ -7,6 +7,7 @@ import TrackPerformance from "@/components/landing/track-performance"
 import AIFeature from "@/components/landing/ai-feature"
 import FAQSection from "@/components/landing/faq"
 import CTASection from "@/components/landing/cta"
+import PricingSection from "@/components/landing/pricing"
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <DeepInsights />
       <TrackPerformance />
       <AIFeature />
+      <PricingSection />
       <FAQSection />
       <CTASection />
     </div>
