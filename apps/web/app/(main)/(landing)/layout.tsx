@@ -18,7 +18,8 @@ export default function SubFolderLayout({
         <LandingNavbar />
        
         {/* Main Content Area with mt-24 to create a gap from the fixed Navbar */}
-        <main className="w-full container mx-auto px-2 lg:px-4 mt-24 pb-12">
+        {/* <main className="w-full container mx-auto px-2 lg:px-4 mt-24 pb-12"> */}
+        <main className="w-full container mx-auto grow px-2 lg:px-4 mt-24 pb-12">
           {children}
         </main>
       </div>
