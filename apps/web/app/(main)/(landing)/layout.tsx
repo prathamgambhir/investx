@@ -1,5 +1,6 @@
 import React from "react";
 import LandingNavbar from "@/components/landing/landing-navbar";
+import Footer from "@/components/common/footer";
 
 export default function SubFolderLayout({
   children,
@@ -22,6 +23,7 @@ export default function SubFolderLayout({
         <main className="w-full container mx-auto grow px-2 lg:px-4 mt-24 pb-12">
           {children}
         </main>
+        <Footer />
       </div>
     </div>
   );
