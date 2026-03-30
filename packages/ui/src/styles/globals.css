@@ -142,4 +142,41 @@
     @apply border border-white/10 bg-white/5 shadow-xl backdrop-blur-md;
   }
 
+  /* Shared landing + InvestGPT: radial base (matches (landing)/layout) */
+  .bg-landing-radial {
+    background: radial-gradient(
+      circle at 50% 25%,
+      rgba(0, 163, 255, 0.1),
+      rgb(255, 255, 255)
+    );
+  }
+  .dark .bg-landing-radial {
+    background: radial-gradient(
+      circle at 50% 25%,
+      rgba(120, 119, 198, 0.22),
+      rgb(0, 0, 0)
+    );
+  }
+
+  /* InvestGPT: soft mesh blobs (light + dark tints aligned with landing purple glow) */
+  .investgpt-mesh {
+    @apply pointer-events-none absolute inset-0 z-0 overflow-hidden opacity-[0.85] dark:opacity-20;
+  }
+  .investgpt-mesh-blob {
+    @apply absolute rounded-full blur-[130px] dark:blur-[110px];
+  }
+  .investgpt-mesh-blob--1 {
+    @apply top-[-10%] left-[-20%] h-[80%] w-[80%] bg-[#f3e8ff] dark:bg-indigo-900/30;
+  }
+  .investgpt-mesh-blob--2 {
+    @apply top-[10%] right-[-20%] h-[70%] w-[60%] bg-[#faf5ff] dark:bg-purple-900/20;
+  }
+
+  /* InvestGPT main surface: light + dark (dark matches landing black + subtle card tones) */
+  .investgpt-surface {
+    @apply bg-[#fdfdfd] dark:bg-background;
+  }
+  .investgpt-input-gradient {
+    @apply bg-gradient-to-t from-[#fdfdfd] via-[#fdfdfd] to-transparent dark:from-background dark:via-background dark:to-transparent;
+  }
 }
