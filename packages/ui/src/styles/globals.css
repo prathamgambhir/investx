@@ -179,4 +179,11 @@
   .investgpt-input-gradient {
     @apply bg-gradient-to-t from-[#fdfdfd] via-[#fdfdfd] to-transparent dark:from-background dark:via-background dark:to-transparent;
   }
+
+  .investgpt-icon-btn {
+    @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-all active:scale-95;
+  }
+  .investgpt-chat-input-shell {
+    @apply mx-auto flex w-full max-w-[850px] items-center rounded-full border border-slate-200/50 bg-white/80 p-1.5 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-[#1d1f27]/90;
+  }
 }
