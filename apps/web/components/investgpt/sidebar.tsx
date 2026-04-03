@@ -10,15 +10,7 @@ import {
   Plus,
   Search,
 } from "@hugeicons/core-free-icons";
-
-const CHAT_HISTORY = [
-  { title: "Nvidia Q3 Forecast Analysis" },
-  { title: "ETF Pair Trading Strategy Review" },
-  { title: "Understanding K-Score Ratios" },
-  { title: "Bitcoin Adoption Thesis Breakdown" },
-  { title: "Quantamental Model Backtest Results" },
-  { title: "SEC Filing Summary for AAPL" },
-];
+import { INVESTGPT_CHAT_HISTORY } from "@/config/investgpt";
 
 function SectionHeader({ title }: { title: string }) {
   return (
@@ -135,7 +127,7 @@ export function Sidebar({ mobileOpen, onMobileClose }: SidebarProps) {
           <div>
             <SectionHeader title="Recent History" />
             <div className="flex flex-col gap-1">
-              {CHAT_HISTORY.map((chat) => (
+              {INVESTGPT_CHAT_HISTORY.map((chat) => (
                 <ChatItem key={chat.title} title={chat.title} />
               ))}
             </div>
