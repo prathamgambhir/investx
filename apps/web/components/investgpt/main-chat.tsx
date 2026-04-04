@@ -1,24 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowUp, Paperclip } from "@hugeicons/core-free-icons";
 import { cn } from "@workspace/ui/lib/utils";
-
-type ChatRole = "user" | "assistant";
-
-type ChatMessage = {
-  id: string;
-  role: ChatRole;
-  content: string;
-};
-
-const ASSISTANT_PLACEHOLDER =
-  "Thanks for your message. This is a preview response — InvestGPT will connect to your models here.";
+import { useInvestgptChat } from "@/hooks/use-investgpt-chat";
 
 export function MainChat() {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [draft, setDraft] = useState("");
+  const { messages, draft, setDraft, sendMessage } = useInvestgptChat();
   const endRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = useCallback(() => {
@@ -28,30 +17,6 @@ export function MainChat() {
   useEffect(() => {
     scrollToBottom();
   }, [messages, scrollToBottom]);
-
-  const sendMessage = useCallback(() => {
-    const trimmed = draft.trim();
-    if (!trimmed) return;
-
-    const userMsg: ChatMessage = {
-      id: crypto.randomUUID(),
-      role: "user",
-      content: trimmed,
-    };
-    setMessages((prev) => [...prev, userMsg]);
-    setDraft("");
-
-    window.setTimeout(() => {
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: crypto.randomUUID(),
-          role: "assistant",
-          content: ASSISTANT_PLACEHOLDER,
-        },
-      ]);
-    }, 500);
-  }, [draft]);
 
   const hasConversation = messages.length > 0;
 
@@ -67,7 +32,7 @@ export function MainChat() {
             </div>
           </div>
         ) : (
-          <div className="mx-auto flex w-full max-w-[52rem] flex-col gap-6 py-6">
+          <div className="mx-auto flex w-full max-w-208 flex-col gap-6 py-6">
             {messages.map((m) => (
               <div
                 key={m.id}
@@ -94,10 +59,10 @@ export function MainChat() {
       </div>
 
       <div className="relative z-20 shrink-0 investgpt-input-gradient px-4 pb-8 pt-4 sm:px-6 md:px-8">
-        <div className="mx-auto flex w-full max-w-[850px] items-center rounded-full border border-slate-200/50 bg-white/80 p-1.5 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-[#1d1f27]/90">
+        <div className="investgpt-chat-input-shell">
           <button
             type="button"
-            className="ml-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition-all hover:bg-slate-200 active:scale-95 dark:bg-white/5 dark:text-slate-400 dark:hover:bg-white/10"
+            className="investgpt-icon-btn ml-1 bg-slate-100 text-slate-600 hover:bg-slate-200 dark:bg-white/5 dark:text-slate-400 dark:hover:bg-white/10"
           >
             <HugeiconsIcon icon={Paperclip} className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>
@@ -119,7 +84,7 @@ export function MainChat() {
           <button
             type="button"
             onClick={sendMessage}
-            className="mr-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#1a1a1a] text-white transition-all hover:opacity-90 active:scale-95 dark:bg-white dark:text-black"
+            className="investgpt-icon-btn mr-1 bg-[#1a1a1a] text-white hover:opacity-90 dark:bg-white dark:text-black"
           >
             <HugeiconsIcon icon={ArrowUp} className="h-5 w-5 sm:h-6 sm:w-6" />
           </button>
