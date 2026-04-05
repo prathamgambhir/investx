@@ -5,7 +5,7 @@ import { Sparkles, Menu01Icon, UserIcon } from "@hugeicons/core-free-icons";
 import { ToggleThemeButton } from "@/components/theme/toggle-theme";
 import { InvestGPTLogo } from "@/components/common/investgpt-logo";
 import { useInvestGPTUi } from "@/components/investgpt/investgpt-shell";
-import { Button } from "@workspace/ui/components/button";
+import { IconButton } from "@workspace/ui/components/icon-button";
 
 export function Navbar() {
   const { openMobileSidebar } = useInvestGPTUi();
@@ -13,15 +13,12 @@ export function Navbar() {
   return (
     <nav className="relative z-10 flex w-full shrink-0 items-center justify-between px-4 py-4 sm:px-6 md:px-8 md:py-6">
       <div className="flex min-w-0 items-center gap-2 sm:gap-4">
-        <Button
-          type="button"
-          variant="ghost"
-          size="icon"
+        <IconButton
+          ariaLabel="Open sidebar"
+          icon={<HugeiconsIcon icon={Menu01Icon} className="size-4" />}
           className="shrink-0 rounded-xl border border-slate-200/80 bg-white/80 text-slate-600 hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-slate-300 lg:hidden"
           onClick={openMobileSidebar}
-        >
-          <HugeiconsIcon icon={Menu01Icon} className="size-4" />
-        </Button>
+        />
         <InvestGPTLogo className="min-w-0" />
       </div>
 
